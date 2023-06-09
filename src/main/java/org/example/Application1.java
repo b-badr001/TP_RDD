@@ -1,8 +1,10 @@
 package org.example;
 
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 
 import java.util.Arrays;
 
@@ -35,5 +37,23 @@ public class Application1 {
         for (String word : rdd5.collect()){
             System.out.println(word);
         }
+
+        JavaRDD<String> rdd6 = rdd5.map(word -> word.toUpperCase());
+
+        for (String word : rdd6.collect()) {
+            System.out.println(word);
+        }
+
+        JavaPairRDD<String, Integer> pairRDD = rdd6.mapToPair(word -> new Tuple2<>(word, 1));
+
+        JavaPairRDD<String, Integer> reducedRDD = pairRDD.reduceByKey((a, b) -> a + b);
+
+        JavaPairRDD<String, Integer> sortedRDD = reducedRDD.sortByKey();
+
+        for (Tuple2<String, Integer> pair : sortedRDD.collect()) {
+            System.out.println(pair._1() + ": " + pair._2());
+        }
+
+        sc.stop();
     }
 }
