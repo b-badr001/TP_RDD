@@ -1,0 +1,15 @@
+2023-06-01 Paris Chemise 29.99
+2023-06-02 New York Chaussures 79.99
+2023-06-03 Londres Pantalon 49.99
+2023-06-04 Tokyo Sac à dos 39.99
+2023-06-05 Berlin Montre 99.99
+2023-06-06 Sydney Lunettes de soleil 19.99
+2023-06-07 Rome T-shirt 14.99
+2023-06-08 Madrid Robe 59.99
+2023-06-09 Los Angeles Casquette 9.99
+2023-06-10 Beijing Jeans 69.99
+2023-06-11 Moscou Baskets 89.99
+2023-06-12 Toronto Portefeuille 24.99
+2023-06-13 Mumbai Écharpe 34.99
+2023-06-14 Le Caire Cravate 19.99
+2023-06-15 Buenos Aires Chapeau 12.99
